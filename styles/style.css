@@ -6,7 +6,14 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
-  background-image: radial-gradient(circle, #0653c7, #27449c, #2c3673, #28294c, #1e1d29);
+  background-image: radial-gradient(
+    circle,
+    #0653c7,
+    #27449c,
+    #2c3673,
+    #28294c,
+    #1e1d29
+  );
   color: white;
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
@@ -16,7 +23,6 @@ h1,
 h2,
 h3,
 p {
-
   margin: 0;
   padding: 0;
 }
@@ -29,6 +35,11 @@ nav {
   display: flex;
   align-items: center;
   min-height: 56px;
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+}
+.nav-hidden {
+  transform: translateY(-100%);
 }
 nav ul {
   list-style: none;
@@ -38,10 +49,10 @@ nav ul {
   flex-direction: row;
   gap: 0.8rem;
 }
-h1{
+h1 {
   font-weight: 900;
 }
-h2{
+h2 {
   font-weight: 400;
 }
 nav a {
@@ -61,26 +72,28 @@ header {
   align-items: flex-start;
   justify-content: center;
 }
-.h2animado{
+.h2animado {
   display: block;
   white-space: nowrap;
   border-right: 6px solid #1266e4;
   width: 19ch;
-  animation: typing 3s steps(19), blink .5s infinite step-end alternate ;
+  animation: typing 3s steps(19), blink 0.5s infinite step-end alternate;
   overflow: hidden;
 }
 
-@keyframes typing{
-  from{ width: 0;}
+@keyframes typing {
+  from {
+    width: 0;
+  }
 }
-@keyframes blink{
+@keyframes blink {
   50% {
     border-color: transparent;
   }
 }
 /* seccion sobre mi  */
 .seccion1 {
-  background-color: rgb(255,255,255,0.2);
+  background-color: rgb(255, 255, 255, 0.2);
   backdrop-filter: blur(1px);
   display: flex;
   flex-direction: column;
@@ -102,20 +115,20 @@ header {
   padding: 1rem 0;
   gap: 2rem;
 }
-.carrucel-proyectos::-webkit-scrollbar{
+.carrucel-proyectos::-webkit-scrollbar {
   display: none;
 }
 .proyecto {
   min-height: 300px;
   width: 100%;
   max-width: 350px;
-  background-color: rgb(255,255,255,0.2);
+  background-color: rgb(255, 255, 255, 0.2);
   backdrop-filter: blur(1px);
   border-radius: 30px;
   -webkit-box-shadow: 5px 7px 15px -6px #000000;
   box-shadow: 5px 7px 15px -6px #000000;
   flex: 0 0 85%;
-  scroll-snap-align: center ;
+  scroll-snap-align: center;
 }
 /* seccion experiencias */
 .seccion3 {
@@ -155,8 +168,8 @@ footer {
     flex: none;
   }
 }
-@media (min-width: 1024px){
-  main{
+@media (min-width: 1024px) {
+  main {
     max-width: 1200px;
     margin: 0 auto;
   }
