@@ -8,7 +8,7 @@ body {
   font-size: 16px;
   background-image: radial-gradient(
     circle,
-    #0653c7,
+    rgb(6, 83, 199),
     #27449c,
     #2c3673,
     #28294c,
@@ -30,7 +30,8 @@ p {
 nav {
   position: sticky;
   top: 0;
-  background-color: #0653c7;
+  background-color: rgb(6, 83, 199, 0.5);
+  backdrop-filter: blur(1px);
   z-index: 10;
   display: flex;
   align-items: center;
@@ -132,9 +133,19 @@ header {
 }
 /* seccion experiencias */
 .seccion3 {
+  background-color: rgb(255, 255, 255, 0.2);
+  backdrop-filter: blur(1px);
   display: flex;
   flex-direction: column;
   padding: 16px;
+  gap: 0.5rem;
+}
+.experiencia-laboral {
+  background-color: #ffffff59;
+  backdrop-filter: blur(1px);
+  border-radius: 16px;
+  padding: 16px;
+  min-height: auto;
 }
 /* seccion de contacto */
 .seccion4 {
@@ -144,16 +155,26 @@ header {
   gap: 0.5rem;
 }
 .imagenes-contacto {
-  background-color: aqua;
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
 }
 footer {
-  background-color: aqua;
-  padding: 16px;
+  background-color: #0653c780;
+  backdrop-filter: blur(1px);
+  display: flex;
+  flex-direction: column;
+  min-height: 20dvh;
+  text-align: center;
+  justify-content: center;
 }
 @media (min-width: 768px) {
+  nav ul {
+    gap: 1.5rem;
+  }
+  .seccion1 {
+    border-radius: 20px;
+  }
   .contenedor-proyectos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -167,10 +188,19 @@ footer {
     max-width: 400px;
     flex: none;
   }
+  .seccion3 {
+    border-radius: 30px;
+  }
 }
+
 @media (min-width: 1024px) {
   main {
     max-width: 1200px;
     margin: 0 auto;
+  }
+  .nombre{
+    max-width: 1200px ;
+    margin: 0 auto;
+    padding-left: 2rem;
   }
 }
