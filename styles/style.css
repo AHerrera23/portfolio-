@@ -19,6 +19,12 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
 }
+button {
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
 h1,
 h2,
 h3,
@@ -41,7 +47,7 @@ nav {
   transition: transform 0.3s ease-in-out;
   will-change: transform;
 }
-a{
+a {
   text-decoration: none;
 }
 .nav-hidden {
@@ -69,7 +75,7 @@ nav a {
 header {
   min-height: 100dvh;
 }
-section{
+section {
   margin: 16px;
   border-radius: 30px;
 }
@@ -165,6 +171,8 @@ section{
 .seccion4 {
   display: flex;
   flex-direction: column;
+  background-color: rgb(255, 255, 255, 0.2);
+  backdrop-filter: blur(1px);
   padding: 16px;
   gap: 0.5rem;
 }
@@ -173,11 +181,11 @@ section{
   flex-direction: row;
   gap: 0.5rem;
 }
-.icono{
+.icono {
   width: 50px;
   z-index: 10;
 }
-.cv-seccion5{
+.cv-seccion5 {
   display: flex;
   flex-direction: column;
   background-color: rgb(255, 255, 255, 0.2);
@@ -186,24 +194,60 @@ section{
   padding: 16px;
   gap: 0.5rem;
 }
+.cv {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+.btn {
+  background-color: #0653c780;
+  width: 250px;
+  height: 35px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  font-weight: 300;
+  -webkit-box-shadow: 5px 7px 15px -6px #000000;
+  box-shadow: 5px 7px 15px -6px #000000;
+  outline: none;
+  color: white;
+  -webkit-tap-highlight-color: transparent;
+}
 footer {
   background-color: #0653c780;
   backdrop-filter: blur(1px);
   display: flex;
+  padding: 16px;
   flex-direction: column;
-  min-height: 20dvh;
   text-align: center;
   justify-content: center;
+  gap: 0.5rem;
+}
+.links{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+footer a{
+  outline: none;
+  color: rgb(255, 255, 255, 0.2);
+  -webkit-tap-highlight-color: transparent;
 }
 @media (min-width: 768px) {
   nav ul {
     gap: 1.5rem;
   }
-  section{
-  margin: 16px  0px 16px 0px;
-  border-radius: 30px;
-}
-  
+  section {
+    margin: 16px 0px 16px 0px;
+    border-radius: 30px;
+  }
+
   .contenedor-proyectos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -217,6 +261,19 @@ footer {
     max-width: 400px;
     flex: none;
   }
+  .seccion4 {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(1px);
+    gap: 1rem;
+  }
+  .imagenes-contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -224,8 +281,8 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
   }
-  .nombre{
-    max-width: 1200px ;
+  .nombre {
+    max-width: 1200px;
     margin: 0 auto;
     padding-left: 2rem;
   }
