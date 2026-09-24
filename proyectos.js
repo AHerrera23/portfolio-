@@ -34,7 +34,7 @@ const PROYECTOS = [
     resultado: "",
     galeria: [
       { src: "images/3dpm/logo.png", alt: "logo de 3DPM" },
-      { src: "images/3dpm/instagram post - 1.png", alt: "posteo" },
+      { src: "images/3dpm/instagram.png", alt: "posteo" },
       { src: "images/3dpm/image.png", alt: "captura de figma" },
       { src: "images/3dpm/menu-3dpm.png", alt: "Home del catálogo de 3DPM" },
       { src: "images/3dpm/desplegable.png", alt: "desplegable del catálogo de 3DPM" },
