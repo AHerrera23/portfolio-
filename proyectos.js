@@ -26,7 +26,7 @@ const PROYECTOS = [
     titulo: "3DPM",
     resumen: "Catálogo web con panel de administración editable por el cliente.",
     stack: ["HTML", "CSS", "JavaScript", "Firebase", "Vercel", "Figma"],
-    portada: "images/3dpm/logo-2.png",
+    portada: "images/3dpm/logo.png",
     portadaAlt: "Home del catálogo web de 3DPM",
     rol: "Diseño y desarrollo completo.",
     problema: "El cliente necesitaba un catálogo online para mostrar sus servicios y productos, y poder actualizarlo sin depender de un desarrollador.",
@@ -34,7 +34,6 @@ const PROYECTOS = [
     resultado: "",
     galeria: [
       { src: "images/3dpm/logo.png", alt: "logo de 3DPM" },
-      { src: "images/3dpm/instagram.png", alt: "posteo" },
       { src: "images/3dpm/image.png", alt: "captura de figma" },
       { src: "images/3dpm/menu-3dpm.png", alt: "Home del catálogo de 3DPM" },
       { src: "images/3dpm/desplegable.png", alt: "desplegable del catálogo de 3DPM" },
