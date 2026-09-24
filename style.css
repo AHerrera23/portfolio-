@@ -381,21 +381,3 @@ a.galeria {
 .detalle .btn-proyecto {
   max-width: 250px;
 }
-
-/* imagenes de galeria: nunca mas grandes que la tarjeta */
-.galeria {
-  min-width: 0;
-}
-.galeria img {
-  max-width: 100%;
-}
-.galeria-principal {
-  width: 100%;
-  height: auto;
-  min-height: 0;
-  max-height: 420px;
-  background-color: transparent;
-}
-.miniatura {
-  min-width: 0;
-}
