@@ -41,7 +41,12 @@ if (contenedor) {
     const info = el("div", "proyecto-info");
     const btn = el("a", "btn btn-proyecto", "Ver proyecto");
     btn.href = url;
-    info.append(el("h3", "titulo-proyecto", p.titulo), el("p", "descripcion-proyecto", p.resumen), listaTags(p.stack), btn);
+    info.append(
+      el("h3", "titulo-proyecto", p.titulo),
+      el("p", "descripcion-proyecto", p.resumen),
+      listaTags(p.stack),
+      btn,
+    );
     card.append(portada, info);
     contenedor.append(card);
   });
@@ -59,8 +64,17 @@ if (detalle) {
     detalle.append(el("h2", null, "Proyecto no encontrado"));
   } else {
     document.title = `${p.titulo} | Abel Herrera`;
-    detalle.append(el("h2", null, p.titulo), el("p", null, p.resumen), listaTags(p.stack));
-    [["Mi rol", p.rol], ["El problema", p.problema], ["El proceso", p.proceso], ["El resultado", p.resultado]].forEach(([t, txt]) => {
+    detalle.append(
+      el("h2", null, p.titulo),
+      el("p", null, p.resumen),
+      listaTags(p.stack),
+    );
+    [
+      ["Mi rol", p.rol],
+      ["El problema", p.problema],
+      ["El proceso", p.proceso],
+      ["El resultado", p.resultado],
+    ].forEach(([t, txt]) => {
       if (!txt) return;
       const bloque = el("div", "detalle-bloque");
       bloque.append(el("h3", null, t), el("p", null, txt));
@@ -82,7 +96,9 @@ if (detalle) {
         b.addEventListener("click", () => {
           principal.src = g.src;
           principal.alt = g.alt;
-          minis.querySelectorAll(".miniatura").forEach((x) => x.classList.remove("activa"));
+          minis
+            .querySelectorAll(".miniatura")
+            .forEach((x) => x.classList.remove("activa"));
           b.classList.add("activa");
         });
         minis.append(b);
@@ -90,12 +106,18 @@ if (detalle) {
       galeria.append(principal, minis);
       detalle.append(galeria);
     }
+    const linksContainer = el("div", "links-container");
+
     (p.links || []).forEach((l) => {
       const a = el("a", "btn btn-proyecto", l.texto);
+
       a.href = l.url;
       a.target = "_blank";
       a.rel = "noopener";
-      detalle.append(a);
+
+      linksContainer.append(a);
     });
+
+    detalle.append(linksContainer);
   }
 }

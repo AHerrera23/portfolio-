@@ -88,14 +88,28 @@ section {
   align-items: flex-start;
   justify-content: center;
 }
-.h2animado {
+.hanimado {
   display: block;
   white-space: nowrap;
   border-right: 6px solid #1266e4;
-  width: 19ch;
-  animation: typing 3s steps(19), blink 0.5s infinite step-end alternate;
+  width: 20ch;
+  animation: typing 3s steps(20) forwards, blink 0.5s infinite step-end alternate;
   overflow: hidden;
 }
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to{
+    width: 12ch;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 
 @keyframes typing {
   from {
@@ -158,8 +172,6 @@ section {
   gap: 1rem;
 }
 .experiencia-laboral {
-  background-color: #ffffff59;
-  backdrop-filter: blur(1px);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -259,7 +271,9 @@ footer a{
     min-height: 300px;
     width: 100%;
     max-width: 400px;
-    flex: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .seccion4 {
     text-align: center;
@@ -292,6 +306,7 @@ footer a{
 .proyecto {
   display: flex;
   flex-direction: column;
+  align-items: center;
   overflow: hidden;
 }
 .galeria {
@@ -364,6 +379,15 @@ a.galeria {
 .detalle {
   max-width: 640px;
   margin: 16px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 .volver {
   color: white;
@@ -377,6 +401,8 @@ a.galeria {
 }
 .galeria-detalle {
   padding: 0;
+  display: flex;
+  align-items: center;
 }
 .detalle .btn-proyecto {
   max-width: 250px;
@@ -387,7 +413,7 @@ a.galeria {
   min-width: 0;
 }
 .galeria img {
-  max-width: 100%;
+  max-width: 200px;
 }
 .galeria-principal {
   width: 100%;
