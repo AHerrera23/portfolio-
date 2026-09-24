@@ -26,7 +26,7 @@ const PROYECTOS = [
     titulo: "3DPM",
     resumen: "Catálogo web con panel de administración editable por el cliente.",
     stack: ["HTML", "CSS", "JavaScript", "Firebase", "Vercel", "Figma"],
-    portada: "images/3dpm/recurso 8vetas.png",
+    portada: "images/3dpm/logo-2.png",
     portadaAlt: "Home del catálogo web de 3DPM",
     rol: "Diseño y desarrollo completo.",
     problema: "El cliente necesitaba un catálogo online para mostrar sus servicios y productos, y poder actualizarlo sin depender de un desarrollador.",
