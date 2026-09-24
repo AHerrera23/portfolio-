@@ -60,22 +60,5 @@ const PROYECTOS = [
       { src: "images/ah/senna.jpg", alt: "composicion de Senna" },
     ],
     links: [],
-  },{
-    id: "juegos",
-    titulo: "Juegos",
-    resumen: "Diseños y prototipos de juegos.",
-    stack: ["Unity"],
-    portada: "images/3dpm/home.png",
-    portadaAlt: "juegos de unity",
-    rol: "Diseñador y desarrollador.",
-    problema: "Cuando comencé a aprender a usar la suite de Adobe, me propuse crear diseños personales para practicar y profundizar mis conocimientos. Compartí estos procesos en Instagram, donde pude documentar la evolución de mi trabajo.",
-    proceso: "A partir de ideas e intereses propios, desarrollo diseños aplicables a posters, wallpapers y estampas para indumentaria, combinando diversas herramientas de la suite de Adobe.",
-    resultado: "",
-    galeria: [
-      { src: "images/3dpm/home.png", alt: "Home del catálogo de 3DPM" },
-      { src: "images/3dpm/catalogo.png", alt: "Catálogo de productos de 3DPM" },
-      { src: "images/3dpm/admin.png", alt: "Panel de administración de 3DPM" },
-    ],
-    links: [],
   },
 ];
