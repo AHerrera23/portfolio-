@@ -31,7 +31,7 @@ const PROYECTOS = [
     rol: "Diseño y desarrollo completo.",
     problema: "El cliente necesitaba un catálogo online para mostrar sus servicios y productos, y poder actualizarlo sin depender de un desarrollador.",
     proceso: "Partí de un mockup en Figma y lo llevé a código con CSS a medida (glassmorphism, responsive, divisores con ondas). Reestructuré el sitio para que los servicios sean lo primero que se ve, y armé un panel de administración con Firebase donde el cliente edita productos y categorías. Antes de publicar hice una revisión de seguridad: corregí una vulnerabilidad XSS, ajusté robots.txt, oculté el panel de los buscadores y desactivé un método de login que no correspondía.",
-    resultado: "",
+    resultado: "El resultado fue que el cliente cuenta ahora con una web funcional que le permite darse a conocer y presentar su catálogo de productos a potenciales clientes.",
     galeria: [
       { src: "images/3dpm/logo.png", alt: "logo de 3DPM" },
       { src: "images/3dpm/image.png", alt: "captura de figma" },
