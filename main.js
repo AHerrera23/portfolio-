@@ -54,6 +54,7 @@ if (contenedor) {
     img.src = p.portada;
     img.alt = p.portadaAlt || p.titulo;
     img.loading = "lazy";
+    img.decoding = "async";
     portada.append(img);
     const info = el("div", "proyecto-info");
     const btn = el("a", "btn btn-proyecto", "Ver proyecto");
@@ -102,6 +103,7 @@ if (detalle) {
       const principal = el("img", "galeria-principal");
       principal.src = p.galeria[0].src;
       principal.alt = p.galeria[0].alt;
+      principal.decoding = "async";
       const minis = el("div", "galeria-miniaturas");
       p.galeria.forEach((g, i) => {
         const b = el("button", i === 0 ? "miniatura activa" : "miniatura");
@@ -109,6 +111,8 @@ if (detalle) {
         const mi = el("img");
         mi.src = g.src;
         mi.alt = "";
+        mi.loading = "lazy";
+        mi.decoding = "async";
         b.append(mi);
         b.addEventListener("click", () => {
           principal.src = g.src;
