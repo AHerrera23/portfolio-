@@ -425,3 +425,147 @@ a.galeria {
 .miniatura {
   min-width: 0;
 }
+
+/* Presentación compacta y adaptable */
+header {
+  min-height: 100svh;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 82% 48%, rgba(57, 132, 255, 0.3), transparent 34%);
+}
+.nombre {
+  min-height: calc(100svh - 56px);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+.intro-copy { max-width: 650px; }
+.intro-kicker {
+  display: inline-block;
+  color: #a9ccff;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+}
+.nombre h1 {
+  font-size: clamp(3.4rem, 12vw, 7rem);
+  line-height: 0.88;
+  letter-spacing: -0.09em;
+  text-wrap: balance;
+}
+.salto-nombre { display: none; }
+.hanimado {
+  border-right: 3px solid #8dbaff;
+  width: 20ch;
+  max-width: 100%;
+  font-size: clamp(1rem, 4vw, 1.7rem);
+  color: #c7dcff;
+  animation: typing 2.4s steps(20) forwards, blink 0.7s infinite step-end alternate;
+  overflow: hidden;
+  margin-top: 0.8rem;
+}
+.intro-resumen { color: rgba(255,255,255,.78); line-height: 1.6; max-width: 430px; margin-top: .9rem; }
+.intro-cta { display: inline-flex; gap: .65rem; align-items: center; width: auto; height: auto; padding: .75rem 1.1rem; margin-top: 1.15rem; color: #fff; }
+.hero-visual { height: 210px; width: min(100%, 330px); justify-self: center; position: relative; display: grid; place-items: center; }
+.hero-orbit { position: absolute; border: 1px solid rgba(181,211,255,.35); border-radius: 50%; transform: rotate(-25deg); }
+.orbit-uno { width: 175px; height: 175px; }
+.orbit-dos { width: 245px; height: 105px; border-color: rgba(181,211,255,.22); }
+.hero-core { width: 105px; height: 105px; border-radius: 28px; transform: rotate(-8deg); display: grid; place-items: center; background: linear-gradient(145deg, #8ec2ff, #2865d8 65%, #162966); box-shadow: 0 20px 60px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.55); }
+.hero-core span { transform: rotate(8deg); font-size: 2rem; letter-spacing: -.1em; font-weight: 900; }
+.hero-label { position: absolute; font-size: .6rem; letter-spacing: .12em; color: #d6e6ff; background: rgba(20,42,100,.7); border: 1px solid rgba(255,255,255,.18); border-radius: 99px; padding: .4rem .55rem; }
+.label-diseno { top: 10%; left: 12%; }
+.label-digital { top: 20%; right: 4%; }
+.label-interaccion { bottom: 8%; left: 27%; }
+.hero-spark { position: absolute; right: 14%; bottom: 14%; color: #a9ccff; font-size: 1.5rem; }
+.sobre-mi-contenido { display: grid; gap: 0.8rem; }
+.sobre-mi-lead { font-size: clamp(1.05rem, 2.4vw, 1.45rem); line-height: 1.5; max-width: 850px; }
+.sobre-mi-detalle { line-height: 1.65; color: rgba(255,255,255,.78); max-width: 760px; }
+.sobre-mi-tags { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin: .25rem 0 0; }
+.sobre-mi-tags li { border: 1px solid rgba(255,255,255,.3); border-radius: 99px; padding: .35rem .75rem; font-size: .8rem; }
+.proyectos-cierre { margin-top: .5rem; color: rgba(255,255,255,.78); }
+.proyectos-contacto { color: white; font-weight: 700; width: fit-content; border-bottom: 1px solid #a9ccff; padding-bottom: .2rem; }
+.proyecto { min-height: 0; }
+
+@media (min-width: 768px) {
+  .nombre { grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr); gap: 2rem; padding: 2rem 3rem; }
+  .salto-nombre { display: initial; }
+  .hero-visual { width: min(100%, 470px); height: 440px; }
+  .orbit-uno { width: 330px; height: 330px; }
+  .orbit-dos { width: 450px; height: 200px; }
+  .hero-core { width: 190px; height: 190px; border-radius: 48px; }
+  .hero-core span { font-size: 4rem; }
+  .hero-label { font-size: .75rem; padding: .55rem .8rem; }
+  .proyecto { min-height: 0; }
+}
+@media (min-width: 1024px) {
+  .nombre { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+}
+@media (max-width: 420px) {
+  nav ul { gap: .65rem; padding: 14px 12px; font-size: .85rem; }
+  .nombre { padding: 1.15rem; gap: .3rem; }
+  .hero-visual { height: 165px; }
+  .seccion1, .seccion2, .seccion3, .seccion4, .cv-seccion5 { padding: 14px; border-radius: 22px; }
+  .contenedor-proyectos { gap: 1rem; }
+  .proyecto { flex-basis: 90%; }
+}
+
+/* Menú hamburguesa para pantallas pequeñas */
+.menu-toggle { display: none; }
+.experiencia-laboral { gap: .65rem; background: rgba(8, 35, 100, .2); }
+.experiencia-cabecera { display: flex; flex-direction: column; gap: .25rem; }
+.experiencia-cabecera span { color: #c7dcff; font-size: .82rem; }
+.experiencia-laboral p { line-height: 1.55; color: rgba(255,255,255,.84); }
+.experiencia-enlaces { display: flex; flex-wrap: wrap; gap: .5rem; }
+.experiencia-enlaces a { color: white; font-size: .85rem; border-bottom: 1px solid rgba(169,204,255,.7); padding-bottom: .15rem; }
+@media (max-width: 767px) {
+  nav { justify-content: flex-end; padding: 0 1rem; box-sizing: border-box; }
+  .menu-toggle {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 12px;
+    background: rgba(15, 43, 105, .75);
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 12;
+  }
+  .menu-toggle span { height: 2px; width: 100%; border-radius: 2px; background: white; transition: transform .2s ease, opacity .2s ease; }
+  .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(7px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-7px) rotate(-45deg); }
+  nav ul {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 12px;
+    min-width: 190px;
+    padding: .5rem;
+    margin: 0;
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 16px;
+    background: rgba(18, 37, 88, .96);
+    box-shadow: 0 16px 40px rgba(0,0,0,.3);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity .18s ease, transform .18s ease, visibility .18s;
+  }
+  nav.menu-abierto ul { visibility: visible; opacity: 1; transform: translateY(0); }
+  nav ul a { display: block; padding: .8rem; border-radius: 10px; }
+  nav ul a:hover, nav ul a:focus-visible { background: rgba(255,255,255,.12); }
+  .experiencia-laboral { padding: 14px; }
+}
+@media (min-width: 768px) {
+  .experiencia-cabecera { flex-direction: row; align-items: baseline; justify-content: space-between; gap: 1rem; }
+}

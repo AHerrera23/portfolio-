@@ -2,10 +2,27 @@ console.log("hi there");
 // variable que lee el scroll
 let ultimoScrollY = window.scrollY;
 const nav = document.querySelector("nav");
+const menuToggle = document.querySelector(".menu-toggle");
+const menuLinks = nav?.querySelectorAll("#menu-principal a") || [];
+const closeMenu = () => {
+  nav?.classList.remove("menu-abierto");
+  menuToggle?.setAttribute("aria-expanded", "false");
+  menuToggle?.setAttribute("aria-label", "Abrir menú");
+};
+menuToggle?.addEventListener("click", () => {
+  const abierto = nav.classList.toggle("menu-abierto");
+  menuToggle.setAttribute("aria-expanded", String(abierto));
+  menuToggle.setAttribute("aria-label", abierto ? "Cerrar menú" : "Abrir menú");
+});
+menuLinks.forEach((link) => link.addEventListener("click", closeMenu));
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMenu();
+});
 window.addEventListener("scroll", () => {
   const scrolActual = window.scrollY;
   if (scrolActual > ultimoScrollY && scrolActual > 80) {
     nav.classList.add("nav-hidden");
+    closeMenu();
   } else {
     nav.classList.remove("nav-hidden");
   }

@@ -16,88 +16,69 @@
   <body>
     <header>
       <nav>
-        <ul>
-          <li><a href="#sobre-mi">Sobre mi</a></li>
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="menu-principal">
+          <li><a href="#sobre-mi">Sobre mí</a></li>
           <li><a href="#misproyectos">Proyectos</a></li>
           <li><a href="#experiencia">Experiencia</a></li>
         </ul>
       </nav>
       <div class="nombre">
-        <h1>Abel Herrera</h1>
-        <h2 class="hanimado">Diseñador Multimedial</h2>
+        <div class="intro-copy">
+          <span class="intro-kicker">PORTFOLIO · 2026</span>
+          <h1>Abel<br class="salto-nombre" />Herrera</h1>
+          <h2 class="hanimado">Diseñador Multimedial</h2>
+          <p class="intro-resumen">Diseño experiencias digitales donde lo visual y lo interactivo se encuentran.</p>
+          <a class="btn intro-cta" href="#misproyectos">Explorar proyectos <span aria-hidden="true">↘</span></a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-orbit orbit-uno"></div>
+          <div class="hero-orbit orbit-dos"></div>
+          <div class="hero-core"><span>AH</span></div>
+          <span class="hero-label label-diseno">DISEÑO</span>
+          <span class="hero-label label-digital">DIGITAL</span>
+          <span class="hero-label label-interaccion">INTERACCIÓN</span>
+          <span class="hero-spark">✳</span>
+        </div>
       </div>
     </header>
     <main>
       <section id="sobre-mi" class="seccion1">
         <h2>Sobre mi</h2>
-        <p>
-          Diseñador Multimedia en formación, con experiencia en la creación de
-          piezas y proyectos digitales que combinan diseño, tecnología e
-          interacción. Mi formación abarca el desarrollo de identidades y piezas
-          gráficas, diseño de interfaces, desarrollo web, animación y proyectos
-          interactivos, explorando distintas herramientas y lenguajes según las
-          necesidades de cada proyecto. Me interesa trabajar en la intersección
-          entre lo visual y lo tecnológico, buscando transformar ideas en
-          experiencias y soluciones digitales funcionales, atractivas y pensadas
-          para las personas. Este portfolio reúne una selección de proyectos
-          realizados a lo largo de mi formación y experiencia, mostrando las
-          diferentes áreas y herramientas con las que trabajo.
-        </p>
+        <div class="sobre-mi-contenido">
+          <p class="sobre-mi-lead">Combino diseño y tecnología para crear experiencias digitales claras, atractivas y fáciles de usar.</p>
+          <p class="sobre-mi-detalle">Trabajo en identidad visual, interfaces y desarrollo web, con curiosidad por la animación y la interacción.</p>
+          <ul class="sobre-mi-tags" aria-label="Áreas de trabajo">
+            <li>Diseño visual</li><li>UI y web</li><li>Multimedia</li>
+          </ul>
+        </div>
       </section>
       <section id="misproyectos" class="seccion2">
         <h2>Mis Proyectos</h2>
         <div class="contenedor-proyectos"></div>
+        <p class="proyectos-cierre">¿Buscás una mirada visual y digital para tu próximo proyecto?</p>
+        <a class="proyectos-contacto" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
       </section>
       <section id="experiencia" class="seccion3">
         <h2>Mis experiencias</h2>
         <article class="experiencia-laboral">
-          <h3>
-            Desarrollo de interfaces web para invitaciones digitales (2024)-
-            FreeLance
-          </h3>
-          <span>HTML/CSS/JS</span>
-          <ul>
-            <li>
-              Implementación de diseño responsive según requerimientos del
-              cliente
-            </li>
-            <li>Integración de criterios de usabilidad y diseño visual.</li>
-          </ul>
-          <a href="https://anto-y-martin.vercel.app/" target="_blank"
-            >Invitacion casamiento</a
-          >
-          <a href="https://mis18.vercel.app/" target="_blank"
-            >Invitacion 18 años</a
-          >
-          <a href="https://mis15-rho.vercel.app/" target="_blank"
-            >Invitacion 15 años</a
-          >
+          <div class="experiencia-cabecera"><h3>Desarrollo web freelance</h3><span>2024 · HTML, CSS y JavaScript</span></div>
+          <p>Diseñé y desarrollé invitaciones digitales responsive, cuidando la experiencia y el detalle visual.</p>
+          <div class="experiencia-enlaces">
+            <a href="https://anto-y-martin.vercel.app/" target="_blank" rel="noopener">Casamiento ↗</a>
+            <a href="https://mis18.vercel.app/" target="_blank" rel="noopener">18 años ↗</a>
+            <a href="https://mis15-rho.vercel.app/" target="_blank" rel="noopener">15 años ↗</a>
+          </div>
         </article>
         <article class="experiencia-laboral">
-          <h3>
-            Logos y stikers para marcas emprendedoras (2025/2026)-
-            FreeLance
-          </h3>
-          <span>Photoshop/Illustrator</span>
-          <ul>
-            <li>
-              Desarrollo de piezas gráficas y recursos de identidad visual a partir de los requerimientos y referencias del cliente.
-            </li>
-            <li>Diseño y adaptación de logos, stickers y elementos gráficos para diferentes aplicaciones y soportes.</li>
-            <li>Interpretación de estilos visuales y necesidades de comunicación para desarrollar propuestas acordes a cada emprendimiento.</li>
-          </ul>
+          <div class="experiencia-cabecera"><h3>Identidad visual freelance</h3><span>2025–2026 · Photoshop e Illustrator</span></div>
+          <p>Creé logos, stickers y recursos gráficos a medida para marcas emprendedoras.</p>
         </article>
         <article class="experiencia-laboral">
-          <h3>
-            Diseñador en Estampas JAMM (2026)-
-            FreeLance
-          </h3>
-          <span>Photoshop/Illustrator</span>
-          <ul>
-            <li>Desarrollo de piezas gráficas para estampas de remeras a partir de pedidos y requerimientos específicos de clientes. </li>
-            <li>Creación de diseños propios destinados a la comercialización y producción de remeras.</li>
-            <li>Preparación y adaptación de archivos gráficos para su aplicación en diferentes soportes y procesos de impresión.</li>
-          </ul>
+          <div class="experiencia-cabecera"><h3>Diseño gráfico · Estampas JAMM</h3><span>2026 · Photoshop e Illustrator</span></div>
+          <p>Desarrollé estampas originales y preparé artes finales para impresión en indumentaria.</p>
         </article>
       </section>
       <section id="contacto" class="seccion4">
